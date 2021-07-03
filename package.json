@@ -1,0 +1,12 @@
+{
+  "name": "oudalifatima_3_28062021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "sass --watch ./sass/main.scss:./style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
