@@ -1,21 +1,28 @@
+@import "utils/variables";
+@import "utils/mixins";
+
 html{
     font-size: 62.5%;
     line-height: 1.15;
 }
+
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    @include flexColumn;
     font-family: 'Roboto', sans-serif;
-    a {
-        text-decoration: none;
-    }
-    button {
-        background: linear-gradient(#FF79DA, #9356DC);
-        color: white;
-        padding: 1rem;
-        border-radius: 1rem;
-    }
+}
+
+a{
+    text-decoration: none;
+}
+
+button {
+    background: linear-gradient($colour-secondary, $colour-primary);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 header{
@@ -23,13 +30,23 @@ header{
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
+}
+
+form {
+    display: inline-flex;
+    width: 100%;
+    /*background-color:*/
+}
+
+input {
+    &:focus-visible{
+        outline: none;
+    }
 }
 
 .fonctionnement li {
-    box-sizing: content-box;
     width: 100%;
-    border: solid #5B6DCD 10px;
+    border: solid $colour-primary 10px;
     padding: 5px;
 }
