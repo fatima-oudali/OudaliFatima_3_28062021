@@ -13,31 +13,30 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
-button {
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-header {
-  font-family: "Shrikhand", cursive;
-}
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+header {
+  font-family: "Shrikhand", cursive;
+}
+
 form {
   display: inline-flex;
   width: 100%;
   /*background-color:*/
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input:focus-visible {

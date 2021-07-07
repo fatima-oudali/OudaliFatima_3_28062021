@@ -1,43 +1,19 @@
 @import "utils/variables";
 @import "utils/mixins";
+@import "base/global";
+@import "layout/header";
+@import "layout/forms";
 
-html{
-    font-size: 62.5%;
-    line-height: 1.15;
-}
-
-body {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    @include flexColumn;
-    font-family: 'Roboto', sans-serif;
-}
 
 a{
     text-decoration: none;
-}
-
-button {
-    background: linear-gradient($colour-secondary, $colour-primary);
-    color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-header{
-    font-family: 'Shrikhand', cursive;
 }
 
 main {
     @include flexColumn;
 }
 
-form {
-    display: inline-flex;
-    width: 100%;
-    /*background-color:*/
-}
+
 
 input {
     &:focus-visible{
