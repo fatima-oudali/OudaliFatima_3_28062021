@@ -9,3 +9,24 @@
         margin: 0;
     }
 }
+
+.title_section {
+    font-size: 2rem;
+    padding: 2rem;
+
+}
+
+.fonctionnement ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1.5rem;
+    li {
+        width: 100%;
+        background: $colour-BgForm;
+        padding: 2.5rem;
+        margin: 1rem 0;
+        font-size: 1.7rem;
+        border-radius: 2.5rem;
+
+    }
+}

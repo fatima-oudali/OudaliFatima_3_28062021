@@ -26,13 +26,17 @@ main section {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   width: 100%;
-  height: 6.5rem;
+  height: 6.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: grey;
+  box-shadow: 1 rem 0 0.3rem black;
 }
 
 .header_logo {
@@ -45,7 +49,7 @@ form {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 4rem;
+  height: 4.5rem;
   background: #eaeaea;
   margin-bottom: 1rem;
 }
@@ -53,6 +57,9 @@ form input {
   border: none;
   background: #eaeaea;
   font-size: 1.6rem;
+}
+form input:focus-visible {
+  outline: none;
 }
 form i {
   font-size: 1.6rem;
@@ -73,6 +80,25 @@ form i {
   margin: 0;
 }
 
+.title_section {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.fonctionnement ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem;
+}
+.fonctionnement ul li {
+  width: 100%;
+  background: #eaeaea;
+  padding: 2.5rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  border-radius: 2.5rem;
+}
+
 .primary-button {
   font-size: 1.6rem;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -81,20 +107,6 @@ form i {
   border-radius: 2.5rem;
   border: none;
   margin: 1rem 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-input:focus-visible {
-  outline: none;
-}
-
-.fonctionnement li {
-  width: 100%;
-  border: solid #9356DC 10px;
-  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
