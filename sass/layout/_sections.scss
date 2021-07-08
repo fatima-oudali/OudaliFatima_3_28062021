@@ -1,0 +1,11 @@
+.presentation {
+    @include flexColumn;
+    background: $colour-BgSection;
+    .reservation {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 70%;
+        height: 25rem;
+        margin: 0;
+    }
+}

@@ -3,10 +3,13 @@ html {
   line-height: 1.15;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,26 +20,71 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+main section {
+  width: 100%;
 }
 
 header {
+  width: 100%;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: grey;
+}
+
+.header_logo {
   font-family: "Shrikhand", cursive;
+  font-size: 3.3rem;
 }
 
 form {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  /*background-color:*/
+  height: 4rem;
+  background: #eaeaea;
+  margin-bottom: 1rem;
+}
+form input {
+  border: none;
+  background: #eaeaea;
+  font-size: 1.6rem;
+}
+form i {
+  font-size: 1.6rem;
+  padding: 1.7rem;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f6f6f6;
+}
+.presentation .reservation {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 70%;
+  height: 25rem;
+  margin: 0;
+}
+
+.primary-button {
+  font-size: 1.6rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  margin: 1rem 0;
 }
 
 a {
   text-decoration: none;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 input:focus-visible {

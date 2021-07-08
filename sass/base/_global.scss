@@ -3,14 +3,21 @@ html{
     line-height: 1.15;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin:0;
     padding:0;
-    box-sizing: border-box;
     @include flexColumn;
     font-family: 'Roboto', sans-serif;
 }
 
 main {
     @include flexColumn;
+    width: 100%;
+    section {
+        width: 100%;
+    }
 }

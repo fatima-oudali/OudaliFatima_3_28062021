@@ -1,5 +1,17 @@
 form {
-    display: inline-flex;
+    @include flexMid;
     width: 100%;
-    /*background-color:*/
+    height: 4rem;
+    background: $colour-BgForm;
+    margin-bottom: 1rem;
+    input {
+        border: none;
+        background: $colour-BgForm;
+        font-size: 1.6rem;
+    }
+    i {
+        font-size: 1.6rem;
+        padding: 1.7rem;
+    }
+    
 }
