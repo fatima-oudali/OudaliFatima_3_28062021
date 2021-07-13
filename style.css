@@ -37,13 +37,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1 rem 0 0.3rem black;
+  /*margin-bottom: 0.8rem;*/
+  box-shadow: 0 1rem 1rem #dddada;
+  z-index: 1;
 }
 
 .header_logo {
   font-family: "Shrikhand", cursive;
   font-size: 3rem;
-  padding-right: 2rem;
 }
 
 form {
@@ -70,6 +71,51 @@ form i {
   font-size: 1.5rem;
 }
 
+.primary-button {
+  font-size: 1.6rem;
+  font-weight: 500;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  margin: 1rem 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #3a3a3a;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 2.5rem;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin: 0;
+}
+footer ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+}
+footer ul a {
+  color: white;
+}
+footer ul i {
+  padding-right: 1rem;
+}
+
+/*Header*/
+.header_logo {
+  padding-right: 2rem;
+}
+
 .presentation {
   display: flex;
   flex-direction: column;
@@ -78,8 +124,8 @@ form i {
 }
 .presentation .reservation {
   text-align: center;
-  font-size: 1.5rem;
-  width: 70%;
+  font-size: 1.7rem;
+  width: 75%;
   height: 25rem;
   margin: 0;
 }
@@ -175,59 +221,24 @@ form i {
 }
 .figcaption .fa-heart:hover {
   cursor: pointer;
-  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: 900;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.primary-button {
-  font-size: 1.6rem;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  padding: 1.5rem;
-  border-radius: 2.5rem;
-  border: none;
-  margin: 1rem 0;
+/*Header*/
+.header_menu {
+  /* display: flex;
+   justify-content: flex-start;*/
+  display: grid;
+  grid-template-columns: 45% 1fr;
 }
 
-/*.heart_btn {
-    border: none;
-    background: $colour-primary;
-    padding: 0;
-    font-size: 2rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    opacity: 0;
-    &:hover {
-        opacity: 100%;
-    }
-}*/
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #3a3838;
-  color: white;
-  width: 100%;
-  height: auto;
-  padding: 2.5rem;
-}
-footer h3 {
+.fleche_accueil {
   font-family: "Shrikhand", cursive;
-  font-size: 2.5rem;
-  font-weight: 300;
-  margin: 0;
-}
-footer ul {
-  padding: 0;
-  list-style-type: none;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 3.5rem;
-}
-footer ul a {
-  color: white;
-}
-footer ul i {
-  padding-right: 1rem;
+  font-size: 3rem;
+  margin-left: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+/*Header*/
+.header_menu {
+   /* display: flex;
+    justify-content: flex-start;*/
+    display: grid;
+    grid-template-columns: 45% 1fr;
+}
+
+.fleche_accueil {
+    @include header;
+    margin-left: 2rem;
+}
+
+
