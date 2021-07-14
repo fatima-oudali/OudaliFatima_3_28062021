@@ -1,17 +1,23 @@
 /*Header*/
 
+.header_accueil{
+    box-shadow: 0 1rem 1rem rgb(221, 218, 218);
+    z-index: 1;
+}
+
 .header_logo{
     padding-right: 2rem;
 }
 
+/*Sections*/
 
 .presentation {
     @include flexColumn;
     background: $colour-BgSection;
     .reservation {
         text-align: center;
-        font-size: 1.7rem;
-        width: 75%;
+        font-size: 1.8rem;
+        width: 85%;
         height: 25rem;
         margin: 0;
     }
@@ -51,6 +57,12 @@
         }
 
     }
+    .btn_3 {
+        background-color: #f2eafb;
+    }
+    .fa-store {
+        color: $colour-primary;
+    }
 }
 
 .restaurants {
@@ -60,7 +72,7 @@
         margin:2rem auto;
         width: 90%;
         height: 25.5rem;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         background-color: white;
         border-radius: 1.5rem;
         position: relative;
@@ -100,6 +112,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height: 2rem;
     .fa-heart {
         padding: 0;
         font-size: 2.5rem;

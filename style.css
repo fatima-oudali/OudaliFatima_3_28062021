@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
   line-height: 1.15;
@@ -34,19 +35,17 @@ a {
 header {
   width: 100%;
   height: 6.4rem;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*margin-bottom: 0.8rem;*/
-  box-shadow: 0 1rem 1rem #dddada;
-  z-index: 1;
 }
 
-.header_logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 3rem;
-}
-
+/*.header_logo {
+    font-family: $font-title;
+    font-style: 3rem;
+}*/
 form {
   display: flex;
   justify-content: center;
@@ -89,7 +88,9 @@ footer {
   color: white;
   width: 100%;
   height: auto;
-  padding: 2.5rem;
+  padding: 2rem;
+  z-index: 2;
+  margin-top: 2rem;
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
@@ -98,11 +99,12 @@ footer h3 {
   margin: 0;
 }
 footer ul {
-  padding: 0;
   list-style-type: none;
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 3.5rem;
+  height: 11rem;
+  padding: 0;
 }
 footer ul a {
   color: white;
@@ -112,10 +114,16 @@ footer ul i {
 }
 
 /*Header*/
+.header_accueil {
+  box-shadow: 0 1rem 1rem #dddada;
+  z-index: 1;
+}
+
 .header_logo {
   padding-right: 2rem;
 }
 
+/*Sections*/
 .presentation {
   display: flex;
   flex-direction: column;
@@ -124,8 +132,8 @@ footer ul i {
 }
 .presentation .reservation {
   text-align: center;
-  font-size: 1.7rem;
-  width: 75%;
+  font-size: 1.8rem;
+  width: 85%;
   height: 25rem;
   margin: 0;
 }
@@ -163,6 +171,12 @@ footer ul i {
 .fonctionnement ul li i {
   margin: 0 2rem;
 }
+.fonctionnement ul .btn_3 {
+  background-color: #f2eafb;
+}
+.fonctionnement ul .fa-store {
+  color: #9356DC;
+}
 
 .restaurants {
   background: #f6f6f6;
@@ -174,7 +188,7 @@ footer ul i {
   margin: 2rem auto;
   width: 90%;
   height: 25.5rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   background-color: white;
   border-radius: 1.5rem;
   position: relative;
@@ -213,6 +227,7 @@ footer ul i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 2rem;
 }
 .figcaption .fa-heart {
   padding: 0;
@@ -229,16 +244,104 @@ footer ul i {
 
 /*Header*/
 .header_menu {
-  /* display: flex;
-   justify-content: flex-start;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
   display: grid;
-  grid-template-columns: 45% 1fr;
+  grid-template-columns: 30% 1fr;
+  align-items: center;
+}
+.header_menu .header_logo {
+  margin: 0;
+  padding: 0;
+}
+.header_menu .fleche_accueil {
+  font-family: "Shrikhand", cursive;
+  font-style: 3rem;
+  margin-left: 1.5rem;
 }
 
-.fleche_accueil {
+.header_img {
+  width: 100%;
+  height: 26rem;
+  object-fit: cover;
+  position: fixed;
+  top: 6rem;
+  z-index: -1;
+}
+
+/*Sections*/
+/*Le principal de la page menu: Nom du restaurant & Sections*/
+.main_menu {
+  position: relative;
+  top: 21.5rem;
+  min-height: 142rem;
+  height: 100%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+/*Titre page menu: Nom du restaurant*/
+.title_two {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-family: "Shrikhand", cursive;
-  font-size: 3rem;
-  margin-left: 2rem;
+  font-size: 1.7rem;
+  padding: 3rem 0;
+  margin: 0;
+}
+.title_two h2 {
+  margin: 0;
+}
+
+/*L'ensemble des sections Entrées Plats & Desserts*/
+.menu {
+  width: 95%;
+}
+
+/*Section Entrées, section Plats OU section Desserts*/
+.menu_carte {
+  font-size: 1.8rem;
+}
+.menu_carte ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Contenu de chaque section Entrées, Plats ou Desserts*/
+.menu_container {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  width: auto;
+}
+.menu_container h4 {
+  margin: 0;
+}
+.menu_container ul {
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.menu_container .tarif {
+  font-weight: bold;
+}
+
+/*Bouton Commander*/
+.commander {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
