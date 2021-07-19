@@ -3,12 +3,11 @@ header {
     height: 6.4rem;
     font-family: $font-title;
     font-size: 1.5rem;
-    @include flexMid;
-    
+    /*@include flexMid;*/
+} 
 
+@media all and(min-width: 1024px) {
+    header {
+        font-size: 3rem;
+    }
 }
-
-/*.header_logo {
-    font-family: $font-title;
-    font-style: 3rem;
-}*/

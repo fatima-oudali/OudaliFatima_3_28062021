@@ -9,3 +9,32 @@
     flex-direction: column;
     align-items: center;
 }
+
+@mixin shadow {
+    box-shadow: 0 0.5rem 1.5rem $shadow;
+}
+
+@mixin shadowHover {
+    box-shadow: 0 2rem 1rem $shadow;
+}
+
+@keyframes appear {
+    from {
+        /*transition: translateY(-10rem);*/
+        margin-top: -10rem;
+        opacity: 0;
+    }
+    to {
+       /* transition: translateY(0);*/
+       margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@mixin appear_menu {
+    animation: appear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+
+}
+    
