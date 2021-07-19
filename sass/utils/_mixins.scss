@@ -37,4 +37,17 @@
     animation-fill-mode: backwards;
 
 }
+
+/*@keyframes remplissage {
+    from {
+        font-weight: 400;
+        color: #000;
+    }
+    to {
+        font-weight: 900;
+        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}*/
     

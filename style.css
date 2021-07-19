@@ -11,6 +11,18 @@
     opacity: 1;
   }
 }
+/*@keyframes remplissage {
+    from {
+        font-weight: 400;
+        color: #000;
+    }
+    to {
+        font-weight: 900;
+        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}*/
 html {
   font-size: 62.5%;
   line-height: 1.15;
@@ -48,13 +60,15 @@ header {
   width: 100%;
   height: 6.4rem;
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
-  /*@include flexMid;*/
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media all and (min-width: 1024px) {
   header {
-    font-size: 3rem;
+    /* font-size: 3rem;*/
   }
 }
 form {
@@ -107,6 +121,7 @@ form i {
   padding: 0;
   font-size: 2.5rem;
   margin: 0;
+  font-weight: 0;
 }
 .fa-heart:hover {
   cursor: pointer;
@@ -114,19 +129,23 @@ form i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  transition: all 2s linear;
+  /* animation: remplissage;
+   animation-duration: 3s;
+   animation-fill-mode: backwards;*/
 }
 
-@media all and (min-width: 1024px) {
-  .primary-button {
-    font-size: 1.8rem;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 2.8rem;
-  }
-  .primary-button:hover {
-    font-size: 2.2rem;
-  }
-}
+/*@media all and(min-width: 1024px) {
+    .primary-button {
+        font-size: 1.8rem;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 2.8rem;
+        &:hover {
+            font-size: 2.2rem;
+        }
+    }
+}*/
 footer {
   display: flex;
   flex-direction: column;
@@ -345,13 +364,10 @@ footer ul i {
 /*Header*/
 .header_menu {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: fixed;
   width: 100%;
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  align-items: center;
   background-color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -361,12 +377,16 @@ footer ul i {
 .header_menu .header_logo {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header_menu .fleche_accueil {
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
-  margin-left: 1.5rem;
   transition: all 0.2s linear;
+  position: absolute;
+  left: 1.5rem;
 }
 
 .header_img {
@@ -382,7 +402,7 @@ footer ul i {
 /*Le principal de la page menu: Nom du restaurant & Sections*/
 .main_menu {
   position: relative;
-  top: 21.5rem;
+  top: 21rem;
   min-height: 144rem;
   height: 100%;
   background-color: #f6f6f6;

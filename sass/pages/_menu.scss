@@ -1,11 +1,10 @@
 /*Header*/
 .header_menu{
-    @include flexColumn;
+    @include flexMid;
     position:fixed;
     width: 100%;
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    align-items: center;
+   
+
     background-color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -15,12 +14,14 @@
     .header_logo {
         margin:0;
         padding: 0;
+        @include flexMid;
     }
     .fleche_accueil {
         font-family: $font-title;
         font-size: 2rem;
-        margin-left: 1.5rem;
         transition: all 0.2s linear;
+        position: absolute;
+        left: 1.5rem;
         
     }
 }
@@ -39,7 +40,7 @@
 /*Le principal de la page menu: Nom du restaurant & Sections*/
 .main_menu {
     position: relative;
-    top: 21.5rem;
+    top: 21rem;
     min-height: 144rem;
     height: 100%;
     background-color: $colour-BgSection;
@@ -229,4 +230,5 @@
         }
     }
 }
+
 
