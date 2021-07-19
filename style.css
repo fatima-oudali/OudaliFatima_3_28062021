@@ -121,15 +121,19 @@ form i {
   padding: 0;
   font-size: 2.5rem;
   margin: 0;
-  font-weight: 0;
+  background-image: unset;
+  transition-property: all, font-weight;
+  transition-duration: 2s, 0.1s;
+  transition-delay: 0.1s, 0s;
+  transition-timing-function: linear;
+  /* transition:font-weight 0.1s linear, background-image 2s linear;*/
 }
 .fa-heart:hover {
   cursor: pointer;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background-image: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
-  transition: all 2s linear;
   /* animation: remplissage;
    animation-duration: 3s;
    animation-fill-mode: backwards;*/
@@ -541,6 +545,80 @@ footer ul i {
   padding-right: 4rem;
 }
 
+/*loader*/
+.loader_section {
+  font-family: "Shrikhand", cursive;
+  font-size: 5rem;
+  height: 50rem;
+  line-height: 50rem;
+  /* background-color: fff;*/
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loader {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.loader_circles {
+  border-radius: 5rem;
+  border: 0.3rem solid transparent;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  animation: spin 2s linear infinite;
+  position: relative;
+}
+
+.loader_circles::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  border-radius: 5rem;
+  border: 0.3rem solid transparent;
+  border-left-color: #FF79DA;
+  border-right-color: #9356DC;
+  opacity: 0.8;
+  animation: spinReverse 2s ease-in infinite;
+}
+
+.loader_circles::before {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  border-radius: 5rem;
+  border: 0.3rem solid transparent;
+  border-top-color: #FF79DA;
+  border-bottom-color: #9356DC;
+  opacity: 0.5;
+  animation: spin 2s ease-in infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-720deg);
+  }
+}
 @media all and (min-width: 1024px) {
   header .header_menu {
     grid-template-columns: 42% 1fr;

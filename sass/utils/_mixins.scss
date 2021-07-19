@@ -10,6 +10,12 @@
     align-items: center;
 }
 
+@mixin linearGradient {
+    background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @mixin shadow {
     box-shadow: 0 0.5rem 1.5rem $shadow;
 }

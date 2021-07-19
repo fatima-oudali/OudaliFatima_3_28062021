@@ -180,7 +180,73 @@
     padding-left: 4rem;
     padding-right: 4rem;
 }
+ /*loader*/
 
+.loader_section{
+    font-family: $font-title;
+    font-size: 5rem;
+    height: 50rem;
+    line-height: 50rem;
+   /* background-color: fff;*/
+    @include linearGradient;
+}
+
+.loader{
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loader_circles {
+    border-radius: 5rem;
+    border: 0.3rem solid transparent;
+    border-top-color: $colour-primary;
+    border-bottom-color: $colour-secondary;
+    animation: spin 2s linear infinite;
+    position: relative;
+}
+
+.loader_circles::after {
+    content: '';
+    position: absolute;
+    top:0.5rem;
+    left:0.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    border-radius: 5rem;
+    border: 0.3rem solid transparent;
+    border-left-color: $colour-secondary;
+    border-right-color: $colour-primary;
+    opacity: 0.8;
+    animation: spinReverse 2s ease-in  infinite;
+}
+
+.loader_circles::before {
+    content: '';
+    position: absolute;
+    top:1.2rem;
+    left:1.2rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    border-radius: 5rem;
+    border: 0.3rem solid transparent;
+    border-top-color: $colour-secondary;
+    border-bottom-color: $colour-primary;
+    opacity: 0.5;
+    animation: spin 2s ease-in  infinite;
+}
+
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes spinReverse {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-720deg);}
+}
 
 @media all and(min-width: 1024px) {
     header {
