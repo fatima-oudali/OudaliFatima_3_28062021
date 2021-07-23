@@ -12,6 +12,7 @@ body {
     padding:0;
     @include flexColumn;
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 main {

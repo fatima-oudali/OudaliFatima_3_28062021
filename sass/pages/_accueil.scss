@@ -118,6 +118,111 @@
     line-height: 2rem;
 }
 
+ /*loader*/
+
+ .loader_section{
+    @include flexMid;
+    background: #333;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    line-height: 50rem;
+    p{
+        font-family: $font-title;
+        font-size: 10rem;
+        height: 50rem;
+        padding-left: 3rem;
+        color: $colour-primary;
+        animation: flash 1.5s ease-in infinite;
+    }
+    .point {
+        animation: flash 1.5s ease-in infinite;
+    }
+    .pt_1 {
+        animation-delay: 0.1s;
+    }
+    .pt_2{
+        animation-delay: 0.4s;
+    }
+    .pt_3{
+        animation-delay: 0.7s;
+        
+    }
+}
+
+@keyframes flash {
+    0% {
+        color: $colour-secondary;
+        text-shadow: 0 0 .7rem $colour-secondary;
+    }
+    50% {
+        color: $colour-primary;
+        text-shadow: none;
+    }
+    100% {
+        color: $colour-secondary;
+        text-shadow: 0 0 .7rem $colour-secondary;
+    }
+}
+
+.loader{
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loader_circles {
+    border-radius: 5rem;
+    border: 0.35rem ridge transparent;
+    border-top-color: $colour-primary;
+    border-bottom-color: $colour-secondary;
+    animation: spin 2s linear infinite;
+    position: relative;
+}
+
+.loader_circles::after {
+    content: '';
+    position: absolute;
+    top:0.5rem;
+    left:0.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    border-radius: 5rem;
+    border: 0.35rem ridge transparent;
+    border-left-color: $colour-secondary;
+    border-right-color: $colour-primary;
+    opacity: 0.8;
+    animation: spinReverse 2s linear  infinite;
+}
+
+.loader_circles::before {
+    content: '';
+    position: absolute;
+    top:1.2rem;
+    left:1.2rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    border-radius: 5rem;
+    border: 0.35rem ridge transparent;
+    border-top-color: $colour-secondary;
+    border-bottom-color: $colour-primary;
+    opacity: 0.5;
+    animation: spin 2s linear  infinite;
+}
+
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes spinReverse {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-720deg);}
+}
+
 @media all and(min-width: 1024px) {
     header {
         height: 9rem;
