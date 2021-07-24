@@ -106,17 +106,35 @@ form i {
   padding: 0;
   font-size: 2.5rem;
   margin: 0;
-  transition-property: background, font-weight;
-  transition-duration: 2s, 0.1s;
-  transition-timing-function: ease-in;
+  transition-property: font-weight;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
   /* transition:font-weight 0.1s linear, background-image 2s linear;*/
 }
 .fa-heart:hover {
+  color: #FF79DA;
+  text-shadow: 0 0 0.7rem #9356DC;
   cursor: pointer;
   font-weight: 900;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  animation: battements 0.5s ease-in infinite;
+  animation-delay: 0s;
+  /*background: -webkit-linear-gradient($colour-secondary, $colour-primary);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;*/
+}
+@keyframes battements {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 1rem #9356DC;
+  }
+  90% {
+    color: transparent;
+    text-shadow: 0 0 0.5rem #FF79DA;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 0.5rem #FF79DA;
+  }
 }
 
 /*@media all and(min-width: 1024px) {
@@ -297,114 +315,107 @@ footer ul i {
 }
 
 /*loader*/
-.loader_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #333;
-  position: absolute;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  line-height: 50rem;
+/*.loader_section{
+    @include flexMid;
+    background: #333;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    line-height: 50rem;
+    p{
+        font-family: $font-title;
+        font-size: 10rem;
+        height: 50rem;
+        padding-left: 3rem;
+        color: $colour-primary;
+        animation: flash 1.5s ease-in infinite;
+    }
+    .point {
+        animation: flash 1.5s ease-in infinite;
+    }
+    .pt_1 {
+        animation-delay: 0.1s;
+    }
+    .pt_2{
+        animation-delay: 0.4s;
+    }
+    .pt_3{
+        animation-delay: 0.7s;
+
+    }
 }
-.loader_section p {
-  font-family: "Shrikhand", cursive;
-  font-size: 10rem;
-  height: 50rem;
-  padding-left: 3rem;
-  color: #9356DC;
-  animation: flash 1.5s ease-in infinite;
-}
-.loader_section .point {
-  animation: flash 1.5s ease-in infinite;
-}
-.loader_section .pt_1 {
-  animation-delay: 0.1s;
-}
-.loader_section .pt_2 {
-  animation-delay: 0.4s;
-}
-.loader_section .pt_3 {
-  animation-delay: 0.7s;
+@keyframes flash {
+    0% {
+        color: $colour-secondary;
+        text-shadow: 0 0 .7rem $colour-secondary;
+    }
+    50% {
+        color: $colour-primary;
+        text-shadow: none;
+    }
+    100% {
+        color: $colour-secondary;
+        text-shadow: 0 0 .7rem $colour-secondary;
+    }
 }
 
-@keyframes flash {
-  0% {
-    color: #FF79DA;
-    text-shadow: 0 0 0.7rem #FF79DA;
-  }
-  50% {
-    color: #9356DC;
-    text-shadow: none;
-  }
-  100% {
-    color: #FF79DA;
-    text-shadow: 0 0 0.7rem #FF79DA;
-  }
-}
-.loader {
-  width: 10rem;
-  height: 10rem;
-  display: inline-block;
-  vertical-align: middle;
+.loader{
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .loader_circles {
-  border-radius: 5rem;
-  border: 0.35rem ridge transparent;
-  border-top-color: #9356DC;
-  border-bottom-color: #FF79DA;
-  animation: spin 2s linear infinite;
-  position: relative;
+    border-radius: 5rem;
+    border: 0.35rem ridge transparent;
+    border-top-color: $colour-primary;
+    border-bottom-color: $colour-secondary;
+    animation: spin 2s linear infinite;
+    position: relative;
 }
 
 .loader_circles::after {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  border-radius: 5rem;
-  border: 0.35rem ridge transparent;
-  border-left-color: #FF79DA;
-  border-right-color: #9356DC;
-  opacity: 0.8;
-  animation: spinReverse 2s linear infinite;
+    content: '';
+    position: absolute;
+    top:0.5rem;
+    left:0.5rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    border-radius: 5rem;
+    border: 0.35rem ridge transparent;
+    border-left-color: $colour-secondary;
+    border-right-color: $colour-primary;
+    opacity: 0.8;
+    animation: spinReverse 2s linear  infinite;
 }
 
 .loader_circles::before {
-  content: "";
-  position: absolute;
-  top: 1.2rem;
-  left: 1.2rem;
-  bottom: 1.2rem;
-  right: 1.2rem;
-  border-radius: 5rem;
-  border: 0.35rem ridge transparent;
-  border-top-color: #FF79DA;
-  border-bottom-color: #9356DC;
-  opacity: 0.5;
-  animation: spin 2s linear infinite;
+    content: '';
+    position: absolute;
+    top:1.2rem;
+    left:1.2rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    border-radius: 5rem;
+    border: 0.35rem ridge transparent;
+    border-top-color: $colour-secondary;
+    border-bottom-color: $colour-primary;
+    opacity: 0.5;
+    animation: spin 2s linear  infinite;
 }
 
+
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
+
 @keyframes spinReverse {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-720deg);
-  }
-}
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-720deg);}
+} */
 @media all and (min-width: 1024px) {
   header {
     height: 9rem;
@@ -576,11 +587,10 @@ footer ul i {
 .menu_container .container_detail {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /*overflow: hidden;
   white-space: nowrap;
   text-align: justify;
-  text-overflow: ellipsis;
-  width: 70%;
+  text-overflow: ellipsis;*/
 }
 .menu_container .container_detail h4 {
   margin: 0;
@@ -600,8 +610,8 @@ footer ul i {
   width: 0;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .menu_container .check .fa-check-circle {
   transition: transform 0.1s linear 0.2s;
@@ -610,9 +620,13 @@ footer ul i {
 }
 .menu_container:hover {
   cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: justify;
+  text-overflow: ellipsis;
 }
 .menu_container:hover .check {
-  width: 20%;
+  width: 30%;
   height: 100%;
   transition: all 0.2s linear;
 }
@@ -664,15 +678,15 @@ footer ul i {
     width: 100%;
     margin-top: 5rem;
     margin-bottom: 3rem;
+    /*.menu_container {
+        line-height: 3rem;
+        font-size: 2rem;
+    }*/
   }
   .menu .menu_carte {
     width: 30%;
     height: 100%;
     margin: 1rem;
-  }
-  .menu .menu_container {
-    line-height: 3rem;
-    font-size: 2rem;
   }
 }
 

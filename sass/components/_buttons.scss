@@ -25,19 +25,37 @@
     padding: 0;
     font-size: 2.5rem;
     margin: 0;
-    transition-property: background, font-weight;
-    transition-duration: 2s, 0.1s;
-    transition-timing-function: ease-in;
+    transition-property: font-weight;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
    /* transition:font-weight 0.1s linear, background-image 2s linear;*/
     &:hover {
-       cursor: pointer;
-       font-weight: 900;
-       background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        color: $colour-secondary;
+        text-shadow: 0 0 0.7rem $colour-primary;
+        cursor: pointer;
+        font-weight: 900;
+        animation: battements 0.5s ease-in infinite;
+        animation-delay: 0s;
+       /*background: -webkit-linear-gradient($colour-secondary, $colour-primary);
        -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       
-
+       -webkit-text-fill-color: transparent;*/
    }  
+
+   @keyframes battements {
+    0% {
+        color: $colour-secondary;
+        text-shadow: 0 0 1rem $colour-primary;
+    }
+    90% {
+        color: transparent;
+        text-shadow: 0 0 0.5rem $colour-secondary;
+    }
+    100% {
+        color: $colour-primary;
+        text-shadow: 0 0 0.5rem $colour-secondary;
+    }
+}
+
 }
 
 /*@media all and(min-width: 1024px) {

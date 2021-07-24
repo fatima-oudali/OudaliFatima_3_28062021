@@ -117,11 +117,11 @@
     .container_detail{
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        /*overflow: hidden;
         white-space: nowrap;
         text-align: justify;
-        text-overflow: ellipsis;
-        width: 70%;
+        text-overflow: ellipsis;*/
+        
         h4 {
             margin: 0;
         }
@@ -141,9 +141,7 @@
         border-bottom-right-radius: 1.5rem;
         width:0;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexMid;
         .fa-check-circle {
             transition: transform 0.1s linear 0.2s; 
             color:transparent;
@@ -153,8 +151,13 @@
 
     &:hover {
         cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: justify;
+        text-overflow: ellipsis;
+
         .check {
-            width: 20%;
+            width: 30%;
             height: 100%;
             transition: all 0.2s linear;
             .fa-check-circle {
@@ -216,10 +219,10 @@
             height: 100%;
             margin: 1rem;
         }
-        .menu_container {
+        /*.menu_container {
             line-height: 3rem;
             font-size: 2rem;
-        }
+        }*/
     }
 }
 

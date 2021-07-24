@@ -120,7 +120,7 @@
 
  /*loader*/
 
- .loader_section{
+ /*.loader_section{
     @include flexMid;
     background: #333;
     position: absolute;
@@ -150,7 +150,6 @@
         
     }
 }
-
 @keyframes flash {
     0% {
         color: $colour-secondary;
@@ -221,7 +220,7 @@
 @keyframes spinReverse {
     0%{transform: rotate(0deg);}
     100%{transform: rotate(-720deg);}
-}
+} */
 
 @media all and(min-width: 1024px) {
     header {
