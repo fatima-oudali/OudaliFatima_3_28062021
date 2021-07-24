@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*Hover cards & btn */
 @keyframes appear {
   from {
     transition: translateY(-10rem);
@@ -45,7 +46,7 @@ header {
   width: 100%;
   height: 6.4rem;
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,34 +94,48 @@ form i {
   transition: all 0.3s;
 }
 .primary-button:hover {
+  box-shadow: 0 1rem 1rem #00000033;
   cursor: pointer;
-  box-shadow: 0 2rem 1rem #00000033;
-  opacity: 0.85;
-  transform: scale(1.02);
-  font-size: 1.7rem;
-  font-weight: 500;
+  transform: scale(1.03);
   transition: all 0.3s linear;
+  opacity: 0.85;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.fa-heart {
+.btn_heart .fa-heart {
   padding: 0;
   font-size: 2.5rem;
   margin: 0;
-  transition-property: font-weight;
-  transition-duration: 0.1s;
-  transition-timing-function: linear;
+  /* transition: transform 0.2s linear;
+   transition-delay: 0.1s;*/
+  /* transition-property: font-weight;
+   transition-duration: 0.1s;
+   transition-timing-function: linear;*/
   /* transition:font-weight 0.1s linear, background-image 2s linear;*/
 }
-.fa-heart:hover {
-  color: #FF79DA;
-  text-shadow: 0 0 0.7rem #9356DC;
+.btn_heart:hover {
   cursor: pointer;
+}
+.btn_heart:hover .fa-heart {
   font-weight: 900;
-  animation: battements 0.5s ease-in infinite;
-  animation-delay: 0s;
-  /*background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+  -webkit-text-fill-color: transparent;
+  animation: scaleHeart 0.3s linear;
+  /*color: $colour-secondary;
+  text-shadow: 0 0 0.7rem $colour-primary;
+  animation: battements 0.5s ease-in infinite;*/
+}
+
+@keyframes scaleHeart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @keyframes battements {
   0% {
@@ -133,11 +148,24 @@ form i {
   }
   100% {
     color: #9356DC;
-    text-shadow: 0 0 0.5rem #FF79DA;
+    text-shadow: 0 0 0.7rem #FF79DA;
   }
 }
-
-/*@media all and(min-width: 1024px) {
+/*@keyframes anim_heart{
+    0% {
+        font-weight: 900;
+        background: -webkit-linear-gradient($colour-secondary, $colour-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: scaleHeart 0.3s linear infinite;
+    }
+    100% {
+        color: $colour-secondary;
+        text-shadow: 0 0 0.7rem $colour-primary;
+        animation: battements 0.2s ease-in infinite; 
+    }
+}*/
+/* @media all and(min-width: 1024px) {
     .primary-button {
         font-size: 1.8rem;
         padding: 2rem;
@@ -147,7 +175,8 @@ form i {
             font-size: 2.2rem;
         }
     }
-}*/
+}
+*/
 footer {
   display: flex;
   flex-direction: column;
@@ -254,6 +283,16 @@ footer ul i {
 .fonctionnement ul li i {
   margin: 0 2rem;
 }
+.fonctionnement ul li:hover {
+  box-shadow: 0 1rem 1rem #00000033;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s linear;
+  background-color: #f2eafb;
+}
+.fonctionnement ul li:hover .fas {
+  color: #9356DC;
+}
 .fonctionnement ul .btn_3 {
   background-color: #f2eafb;
 }
@@ -263,6 +302,7 @@ footer ul i {
 
 .restaurants {
   background: #f6f6f6;
+  padding-bottom: 2rem;
 }
 .restaurants .card {
   display: flex;
@@ -292,6 +332,12 @@ footer ul i {
   margin: 0;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+}
+.restaurants .card:hover {
+  box-shadow: 0 1rem 1rem #00000033;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s linear;
 }
 
 .nouveau {
@@ -531,22 +577,18 @@ footer ul i {
 /*L'ensemble des sections Entrées Plats & Desserts*/
 .menu {
   width: 95%;
+  animation: appear 1s linear;
 }
 .menu .entrees {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
+  /*@include appear_menu;*/
+  animation-delay: 0.1s;
 }
 .menu .plats {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
+  /* @include appear_menu;*/
   animation-delay: 0.5s;
 }
 .menu .desserts {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
+  /* @include appear_menu;*/
   animation-delay: 1s;
 }
 
@@ -585,12 +627,13 @@ footer ul i {
   width: 100%;
 }
 .menu_container .container_detail {
+  width: 70%;
   display: flex;
   flex-direction: column;
-  /*overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
   text-align: justify;
-  text-overflow: ellipsis;*/
 }
 .menu_container .container_detail h4 {
   margin: 0;
@@ -620,10 +663,9 @@ footer ul i {
 }
 .menu_container:hover {
   cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: justify;
-  text-overflow: ellipsis;
+}
+.menu_container:hover .container_detail {
+  width: 90%;
 }
 .menu_container:hover .check {
   width: 30%;
@@ -665,29 +707,25 @@ footer ul i {
     font-size: 4rem;
   }
 
-  .main_menu {
-    min-height: 100rem;
-  }
-
-  .menu {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    /*.menu_container {
-        line-height: 3rem;
-        font-size: 2rem;
-    }*/
-  }
-  .menu .menu_carte {
-    width: 30%;
-    height: 100%;
-    margin: 1rem;
-  }
+  /* .menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+      .menu_carte {
+          width: 30%;
+          height: 100%;
+          margin: 1rem;
+      }
+      */
+  /*.menu_container {
+      line-height: 3rem;
+      font-size: 2rem;
+  }*/
 }
 
 /*# sourceMappingURL=style.css.map */

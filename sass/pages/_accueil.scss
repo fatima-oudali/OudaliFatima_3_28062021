@@ -57,6 +57,13 @@
         i {
             margin: 0 2rem;
         }
+        &:hover {
+            @include Hover;
+            background-color: #f2eafb;
+            .fas {
+                color: $colour-primary;
+            }
+        }
 
     }
     .btn_3 {
@@ -69,6 +76,7 @@
 
 .restaurants {
     background: $colour-BgSection;
+    padding-bottom: 2rem;
     .card {
         @include flexColumn;
         margin:2rem auto;
@@ -94,6 +102,9 @@
             margin:0;
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
+        }
+        &:hover {
+            @include Hover;
         }
     }
 } 

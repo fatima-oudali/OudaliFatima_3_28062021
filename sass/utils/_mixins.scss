@@ -20,8 +20,18 @@
     box-shadow: 0 0.5rem 1.5rem $shadow;
 }
 
-@mixin shadowHover {
-    box-shadow: 0 2rem 1rem $shadow;
+
+/*Hover cards & btn */
+
+@mixin shadowHover {                   
+    box-shadow: 0 1rem 1rem $shadow;
+}
+
+@mixin Hover { 
+    box-shadow: 0 1rem 1rem $shadow; 
+    cursor: pointer;
+    transform: scale(1.03);          
+    transition: all 0.3s linear;
 }
 
 @keyframes appear {
@@ -37,6 +47,5 @@
     animation: appear;
     animation-duration: 1s;
     animation-fill-mode: backwards;
-    
 
 }

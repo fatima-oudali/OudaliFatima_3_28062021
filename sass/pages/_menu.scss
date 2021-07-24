@@ -67,15 +67,18 @@
  /*L'ensemble des sections Entrées Plats & Desserts*/
 .menu {
     width:95%;
+    
+    animation: appear 1s linear;
     .entrees {
-        @include appear_menu;
+        /*@include appear_menu;*/
+        animation-delay: 0.1s;
     }
     .plats {
-        @include appear_menu;
+       /* @include appear_menu;*/
         animation-delay: 0.5s;
     }
     .desserts {
-        @include appear_menu;
+       /* @include appear_menu;*/
         animation-delay: 1s;
 
     }
@@ -115,12 +118,13 @@
     height: 9rem;
     width: 100%;
     .container_detail{
+        width: 70%;
         display: flex;
         flex-direction: column;
-        /*overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
+        overflow: hidden;
         text-align: justify;
-        text-overflow: ellipsis;*/
         
         h4 {
             margin: 0;
@@ -134,7 +138,6 @@
         font-weight: bold;
         padding-top: 3rem;
     }
-    
     .check {
         background: $colour-tertiary;
         border-top-right-radius: 1.5rem;
@@ -148,14 +151,11 @@
             transform: rotate(-0.5turn) ;
         }
     }
-
     &:hover {
         cursor: pointer;
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: justify;
-        text-overflow: ellipsis;
-
+        .container_detail{
+            width: 90%;
+        }
         .check {
             width: 30%;
             height: 100%;
@@ -166,8 +166,7 @@
                 position: relative;
                 display: inline;
                 transform: rotate(-20deg) ; 
-            }
-            
+            } 
         }
     }  
 }
@@ -201,11 +200,7 @@
         }
     } 
 
-    .main_menu{
-        min-height: 100rem;
-    }
-
-    .menu {
+    /* .menu {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -219,11 +214,12 @@
             height: 100%;
             margin: 1rem;
         }
+        */
         /*.menu_container {
             line-height: 3rem;
             font-size: 2rem;
         }*/
-    }
+    
 }
 
 
