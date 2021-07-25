@@ -24,11 +24,11 @@
 /*Hover cards & btn */
 
 @mixin shadowHover {                   
-    box-shadow: 0 1rem 1rem $shadow;
+    box-shadow: 0 1.5rem 1rem $shadow;
 }
 
 @mixin Hover { 
-    box-shadow: 0 1rem 1rem $shadow; 
+    @include shadowHover;
     cursor: pointer;
     transform: scale(1.03);          
     transition: all 0.3s linear;

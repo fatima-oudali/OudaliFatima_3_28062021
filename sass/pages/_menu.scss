@@ -69,10 +69,37 @@
     width:95%;
 }
 
+
+
+/*Section Entrées, section Plats OU section Desserts*/
+.menu_carte {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    h3 {
+        margin-bottom: 0.3rem;
+        &::after {
+            content: '';
+            width: 5rem;
+            height: 0.3rem;
+            background: $colour-tertiary;
+            display: block;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+ /*Apparition progressive du menu*/ 
+
 .entrees {
     .menu_container:nth-child(1) {
         @include appear_menu;
-        animation-delay: 0.1s;
+        animation-delay: 0s;
     }
     .menu_container:nth-child(2) {
         @include appear_menu;
@@ -115,30 +142,6 @@
         animation-delay: 1.9s;
     }
 }
-
-/*Section Entrées, section Plats OU section Desserts*/
-.menu_carte {
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 3rem;
-    h3 {
-        margin-bottom: 0.3rem;
-        &::after {
-            content: '';
-            width: 5rem;
-            height: 0.3rem;
-            background: $colour-tertiary;
-            display: block;
-        }
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 /*Contenu de chaque section Entrées, Plats ou Desserts*/
 .menu_container {
     background-color: white;
@@ -176,6 +179,7 @@
         background: $colour-tertiary;
         border-top-right-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
+        transition: all 0.2s ease-in;
         width:0;
         height: 100%;
         @include flexMid;
@@ -188,9 +192,8 @@
     &:hover {
         cursor: pointer;
         .check {
-            width: 25%;
+            width: 30%;
             height: 100%;
-            transition: all 0.2s linear;
             .fa-check-circle {
                 font-size: 2.5rem;
                 color: #fff;
