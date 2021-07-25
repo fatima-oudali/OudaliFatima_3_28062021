@@ -1,14 +1,30 @@
 @charset "UTF-8";
 /*Hover cards & btn */
-@keyframes appear {
+@keyframes appearTrans {
   0% {
     /*transition: translateY(-10rem);*/
-    transform: translateY(-10rem);
+    transform: translateY(-4rem);
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     /* transition: translateY(0);*/
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appearScale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -581,24 +597,96 @@ footer ul i {
 /*L'ensemble des sections Entrées Plats & Desserts*/
 .menu {
   width: 95%;
-  animation: appear;
+}
+
+.entrees .menu_container:nth-child(1) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
   animation-duration: 2s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   animation-fill-mode: forwards;
+  animation-delay: 0.1s;
 }
-.menu .menu_carte .entrees {
-  animation-delay: 0s;
+.entrees .menu_container:nth-child(2) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
 }
-.menu .menu_carte .plats {
-  animation-delay: 1s;
+.entrees .menu_container:nth-child(3) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
 }
-.menu .menu_carte .desserts {
-  animation-delay: 2s;
+.entrees .menu_container:nth-child(4) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.plats .menu_container:nth-child(1) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.9s;
+}
+.plats .menu_container:nth-child(2) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.1s;
+}
+.plats .menu_container:nth-child(3) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.3s;
+}
+
+.desserts .menu_container:nth-child(1) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+.desserts .menu_container:nth-child(2) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+}
+.desserts .menu_container:nth-child(3) {
+  animation: appearScale;
+  /* animation: appearTrans;*/
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.9s;
 }
 
 /*Section Entrées, section Plats OU section Desserts*/
 .menu_carte {
   font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
 }
 .menu_carte h3 {
   margin-bottom: 0.3rem;
