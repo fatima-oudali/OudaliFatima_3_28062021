@@ -35,17 +35,22 @@
 }
 
 @keyframes appear {
-    from {
-        transition: translateY(-10rem);
+    0%{
+        /*transition: translateY(-10rem);*/
+        transform: translateY(-10rem);
+        opacity: 0; 
     }
-    to {
-       transition: translateY(0);
+    100% {
+      /* transition: translateY(0);*/
+       transform: translateY(0);
+       opacity: 1;
     }
 }
 
 @mixin appear_menu {
     animation: appear;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 
 }

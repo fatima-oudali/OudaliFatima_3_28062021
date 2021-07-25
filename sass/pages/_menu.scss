@@ -67,20 +67,15 @@
  /*L'ensemble des sections Entrées Plats & Desserts*/
 .menu {
     width:95%;
-    
-    animation: appear 1s linear;
-    .entrees {
-        /*@include appear_menu;*/
-        animation-delay: 0.1s;
+    @include appear_menu;
+    .menu_carte .entrees {
+        animation-delay: 0s;
     }
-    .plats {
-       /* @include appear_menu;*/
-        animation-delay: 0.5s;
-    }
-    .desserts {
-       /* @include appear_menu;*/
+    .menu_carte .plats {
         animation-delay: 1s;
-
+    }
+    .menu_carte .desserts {
+        animation-delay: 2s;
     }
 }
 
@@ -153,15 +148,12 @@
     }
     &:hover {
         cursor: pointer;
-        .container_detail{
-            width: 90%;
-        }
         .check {
-            width: 30%;
+            width: 25%;
             height: 100%;
             transition: all 0.2s linear;
             .fa-check-circle {
-                font-size: 1.8rem;
+                font-size: 2.5rem;
                 color: #fff;
                 position: relative;
                 display: inline;
