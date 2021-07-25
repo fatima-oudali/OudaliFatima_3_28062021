@@ -13,6 +13,9 @@ form {
         &:focus-visible{
             outline: none;
         }
+        &::placeholder {
+            color: #000;
+        }
     }
     i {
        padding:1.5rem;

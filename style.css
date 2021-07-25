@@ -91,6 +91,9 @@ form input {
 form input:focus-visible {
   outline: none;
 }
+form input::placeholder {
+  color: #000;
+}
 form i {
   padding: 1.5rem;
   font-size: 1.5rem;
