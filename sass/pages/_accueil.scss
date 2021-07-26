@@ -3,6 +3,7 @@
 .header_accueil{
     box-shadow: 0 0.3rem 1rem $shadow;
     z-index: 1;
+
 }
 
 .header_logo{
@@ -134,11 +135,11 @@
  .loader_section{
     @include flexMid;
     background: #333;
-    position: absolute;
-    z-index: 5;
+    position: fixed;
     width: 100%;
     height: 100%;
     line-height: 50rem;
+    animation: visible 100ms 2s linear both;
     
     
     p{
@@ -162,6 +163,16 @@
     .pt_3{
         animation-delay: 0.7s;
         
+    }
+}
+@keyframes visible {
+    from {
+        z-index: 5;
+        opacity: 1;
+    }
+    to {
+        z-index: -100;
+        opacity: 0;
     }
 }
 
