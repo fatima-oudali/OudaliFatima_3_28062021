@@ -3,13 +3,11 @@
     @include flexMid;
     position:fixed;
     width: 100%;
-   
-
     background-color: white;
+    top: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    top:0;
-    z-index: 2;
+    z-index: 1;
         
     .header_logo {
         margin:0;
@@ -48,7 +46,7 @@
 
 }
 
-/*Titre page menu: Nom du restaurant*/
+/*Titre de la page menu: Nom du restaurant*/
 
 .title_two {
     width: 100%;
@@ -61,19 +59,17 @@
     margin: 0;
     
     h2 {
-        margin: 0;
+        
     }
 }
- /*L'ensemble des sections Entrées Plats & Desserts*/
+ /*L'ensemble des sections (entrées plats & desserts): Menu */
 .menu {
     width:95%;
 }
 
-
-
 /*Section Entrées, section Plats OU section Desserts*/
 .menu_carte {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: 2.5rem;
     margin-bottom: 3rem;
     h3 {
@@ -142,6 +138,7 @@
         animation-delay: 1.9s;
     }
 }
+
 /*Contenu de chaque section Entrées, Plats ou Desserts*/
 .menu_container {
     background-color: white;
@@ -152,9 +149,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 9rem;
+    height: 7rem;
     width: 100%;
-    .container_detail{
+    .container_detail{  
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -222,6 +219,12 @@
     padding-right: 4rem;
 }
 
+
+                                             /*Responsive: Version tablette*/
+@media all and(min-width: 768px) {}
+
+
+                                             /*Responsive: Version descktop; grand écran*/
 @media all and(min-width: 1024px) {
     header {
         .header_menu {
@@ -239,32 +242,20 @@
 
     .title_two {
         font-size: 3rem;
-        margin-top: 2rem;
         .fa-heart {
             font-size: 4rem;
         }
-    } 
-
-    /* .menu {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        margin-top: 5rem;
-        margin-bottom: 3rem;
-        .menu_carte {
-            width: 30%;
-            height: 100%;
-            margin: 1rem;
-        }
-        */
-        /*.menu_container {
-            line-height: 3rem;
-            font-size: 2rem;
-        }*/
+    }
     
+    .menu_carte{
+        h3 {
+            font-size: 3rem;
+        }
+        .menu_container {
+            font-size: 2.5rem;
+            height: 10rem;
+        }
+    }
 }
 
 

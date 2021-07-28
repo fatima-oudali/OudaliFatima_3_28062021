@@ -1,16 +1,23 @@
-/*Header*/
-
-.header_accueil{
-    box-shadow: 0 0.3rem 1rem $shadow;
-    z-index: 1;
-
-}
+                                                       /*Header de la page d'accueil*/
 
 .header_logo{
     padding-right: 2rem;
 }
+.header_accueil{
+    box-shadow: 0 0.3rem 1rem $shadow;
+    z-index: 1;
+}
 
-/*Sections*/
+                                        
+                                                    /*Sections de la page d'accueil*/
+
+/*Titres des sections (présentation, fonctionnement, restaurants) de la page d'accueil*/
+.section_title {                   
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+/*Premiere section de la page d'accueil: Présentation*/
 
 .presentation {
     @include flexColumn;
@@ -24,11 +31,7 @@
     }
 }
 
-.section_title {
-    font-size: 2.5rem;
-    padding: 2rem;
-
-}
+/*Deuxième section de la page d'accueil: Fonctionnement*/
 
 .fonctionnement ul {
     list-style-type: none;
@@ -74,6 +77,8 @@
         color: $colour-primary;
     }
 }
+
+/*Troisième section de la page d'accueil: Restaurants*/
 
 .restaurants {
     background: $colour-BgSection;
@@ -130,23 +135,23 @@
     line-height: 2rem;
 }
 
- /*loader*/
+                                                         /*loader*/
 
+
+ /*page loader*/
  .loader_section{
-    @include flexMid;
+    @include flexColumn;
     background: #333;
     position: fixed;
     width: 100%;
     height: 100%;
-    line-height: 50rem;
+    padding-top:15rem;
     animation: visible 100ms 2s linear both;
     
     
     p{
         font-family: $font-title;
-        font-size: 10rem;
-        height: 50rem;
-        padding-left: 3rem;
+        font-size: 5rem;
         color: $colour-primary;
         animation: flash 1.3s ease-in infinite;
         animation-delay: 0.1s;
@@ -165,6 +170,8 @@
         
     }
 }
+
+/*Animation: visibilté du loader*/
 @keyframes visible {
     from {
         z-index: 5;
@@ -176,6 +183,7 @@
     }
 }
 
+/*Animation loader: effet flash sur 'ohmyfood...' */
 @keyframes flash {
     0% {
         color: $colour-secondary;
@@ -191,13 +199,15 @@
     }
 }
 
+/*bloc du loader_circles*/
 .loader{
     width: 10rem;
     height: 10rem;
     display: inline-block;
-    vertical-align: middle;
+    
 }
 
+/*Animation du loader: Premier cercle qui tourne*/
 .loader_circles {
     border-radius: 5rem;
     border: 0.35rem ridge transparent;
@@ -207,6 +217,7 @@
     position: relative;
 }
 
+/*Animation du loader: Deuxième cercle qui tourne à l'interieur du premier cercle*/
 .loader_circles::after {
     content: '';
     position: absolute;
@@ -222,6 +233,7 @@
     animation: spinReverse 2s linear  infinite;
 }
 
+/*Animation du loader: Troisième cercle qui tourne à l'interieur du deuxième cercle*/
 .loader_circles::before {
     content: '';
     position: absolute;
@@ -237,6 +249,7 @@
     animation: spin 2s linear  infinite;
 }
 
+/*Animation du 'check icon': rotation de l'icone */
 @keyframes spin {
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
@@ -246,11 +259,17 @@
     0%{transform: rotate(0deg);}
     100%{transform: rotate(-720deg);}
 }
+                                                /*Reseponsive: Version tablette*/
+@media all and(min-width: 767px) {
 
-@media all and(min-width: 768px) {
-    header {
-        height: 9rem;
+     /*page loader*/
+    .loader_section{
+        p{
+            font-size: 10rem;  
+        }
     }
+
+
     .header_accueil{
         .header_logo {
             margin: 0;
@@ -276,7 +295,9 @@
     .fonctionnement ul {
         display: flex;
         li{
-            margin: 2rem;
+            margin: 1.5rem;
+            padding: 1.5rem;
+            font-size: 1.5rem;
         }
     }
     .restaurants .section_cards{
@@ -289,8 +310,47 @@
             height: 70%;
             margin: 2rem;
         }
-        a {
-            margin: 0;
+    }
+}
+
+                                      /*Responsive: Descktop (grand écran)*/
+
+@media all and(min-width: 1024px){
+    .loader_section{
+        flex-direction: row;
+        justify-content: center;
+        background: $colour-BgSection;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        line-height: 30rem;
+        animation: visible 100ms 2s linear both;
+        
+        
+        p{
+            font-size: 10rem;
+            height: 50rem;
+            padding-left: 2rem;
+            color: $colour-primary;
+            animation: flash 1.3s ease-in infinite;
+            animation-delay: 0.1s;
+        }
+        .loader{
+            margin-bottom: 20rem;
+        }
+    }
+
+}   
+  
+                                             /*Reseponsive: Version Descktop très grand écran*/
+
+@media all and(min-width: 1500px) {
+    .card {
+        img {
+            height: 25rem;
+        }
+        .figcaption {
+            height: 10rem;
         }
     }
 }

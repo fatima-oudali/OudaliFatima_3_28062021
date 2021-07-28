@@ -64,14 +64,21 @@ a {
 
 header {
   width: 100%;
-  height: 6.4rem;
   font-family: "Shrikhand", cursive;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media all and (min-width: 1024px) {
+  header {
+    font-size: 2.5rem;
+    height: 9rem;
+  }
+}
 form {
   display: flex;
   justify-content: center;
@@ -207,7 +214,8 @@ footer {
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
   font-weight: 300;
   margin: 0;
 }
@@ -215,7 +223,7 @@ footer ul {
   list-style-type: none;
   font-size: 1.7rem;
   font-weight: 500;
-  line-height: 3.5rem;
+  line-height: 3rem;
   height: 11rem;
   padding: 0;
 }
@@ -242,17 +250,24 @@ footer ul i {
     font-size: 3rem;
   }
 }
-/*Header*/
+/*Header de la page d'accueil*/
+.header_logo {
+  padding-right: 2rem;
+}
+
 .header_accueil {
   box-shadow: 0 0.3rem 1rem #00000033;
   z-index: 1;
 }
 
-.header_logo {
-  padding-right: 2rem;
+/*Sections de la page d'accueil*/
+/*Titres des sections (présentation, fonctionnement, restaurants) de la page d'accueil*/
+.section_title {
+  font-size: 2.5rem;
+  padding: 2rem;
 }
 
-/*Sections*/
+/*Premiere section de la page d'accueil: Présentation*/
 .presentation {
   display: flex;
   flex-direction: column;
@@ -267,11 +282,7 @@ footer ul i {
   margin: 0;
 }
 
-.section_title {
-  font-size: 2.5rem;
-  padding: 2rem;
-}
-
+/*Deuxième section de la page d'accueil: Fonctionnement*/
 .fonctionnement ul {
   list-style-type: none;
   padding: 0;
@@ -318,6 +329,7 @@ footer ul i {
   color: #9356DC;
 }
 
+/*Troisième section de la page d'accueil: Restaurants*/
 .restaurants {
   background: #f6f6f6;
   padding-bottom: 2rem;
@@ -379,22 +391,21 @@ footer ul i {
 }
 
 /*loader*/
+/*page loader*/
 .loader_section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   background: #333;
   position: fixed;
   width: 100%;
   height: 100%;
-  line-height: 50rem;
+  padding-top: 15rem;
   animation: visible 100ms 2s linear both;
 }
 .loader_section p {
   font-family: "Shrikhand", cursive;
-  font-size: 10rem;
-  height: 50rem;
-  padding-left: 3rem;
+  font-size: 5rem;
   color: #9356DC;
   animation: flash 1.3s ease-in infinite;
   animation-delay: 0.1s;
@@ -412,6 +423,7 @@ footer ul i {
   animation-delay: 0.7s;
 }
 
+/*Animation: visibilté du loader*/
 @keyframes visible {
   from {
     z-index: 5;
@@ -422,6 +434,7 @@ footer ul i {
     opacity: 0;
   }
 }
+/*Animation loader: effet flash sur 'ohmyfood...' */
 @keyframes flash {
   0% {
     color: #FF79DA;
@@ -436,13 +449,14 @@ footer ul i {
     text-shadow: 0 0 0.7rem #FF79DA;
   }
 }
+/*bloc du loader_circles*/
 .loader {
   width: 10rem;
   height: 10rem;
   display: inline-block;
-  vertical-align: middle;
 }
 
+/*Animation du loader: Premier cercle qui tourne*/
 .loader_circles {
   border-radius: 5rem;
   border: 0.35rem ridge transparent;
@@ -452,6 +466,7 @@ footer ul i {
   position: relative;
 }
 
+/*Animation du loader: Deuxième cercle qui tourne à l'interieur du premier cercle*/
 .loader_circles::after {
   content: "";
   position: absolute;
@@ -467,6 +482,7 @@ footer ul i {
   animation: spinReverse 2s linear infinite;
 }
 
+/*Animation du loader: Troisième cercle qui tourne à l'interieur du deuxième cercle*/
 .loader_circles::before {
   content: "";
   position: absolute;
@@ -482,6 +498,7 @@ footer ul i {
   animation: spin 2s linear infinite;
 }
 
+/*Animation du 'check icon': rotation de l'icone */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -498,9 +515,11 @@ footer ul i {
     transform: rotate(-720deg);
   }
 }
-@media all and (min-width: 768px) {
-  header {
-    height: 9rem;
+/*Reseponsive: Version tablette*/
+@media all and (min-width: 767px) {
+  /*page loader*/
+  .loader_section p {
+    font-size: 10rem;
   }
 
   .header_accueil .header_logo {
@@ -529,7 +548,9 @@ footer ul i {
     display: flex;
   }
   .fonctionnement ul li {
-    margin: 2rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .restaurants .section_cards {
@@ -543,8 +564,38 @@ footer ul i {
     height: 70%;
     margin: 2rem;
   }
-  .restaurants .section_cards a {
-    margin: 0;
+}
+/*Responsive: Descktop (grand écran)*/
+@media all and (min-width: 1024px) {
+  .loader_section {
+    flex-direction: row;
+    justify-content: center;
+    background: #f6f6f6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    line-height: 30rem;
+    animation: visible 100ms 2s linear both;
+  }
+  .loader_section p {
+    font-size: 10rem;
+    height: 50rem;
+    padding-left: 2rem;
+    color: #9356DC;
+    animation: flash 1.3s ease-in infinite;
+    animation-delay: 0.1s;
+  }
+  .loader_section .loader {
+    margin-bottom: 20rem;
+  }
+}
+/*Reseponsive: Version Descktop très grand écran*/
+@media all and (min-width: 1500px) {
+  .card img {
+    height: 25rem;
+  }
+  .card .figcaption {
+    height: 10rem;
   }
 }
 /*Header*/
@@ -555,10 +606,10 @@ footer ul i {
   position: fixed;
   width: 100%;
   background-color: white;
+  top: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  top: 0;
-  z-index: 2;
+  z-index: 1;
 }
 .header_menu .header_logo {
   margin: 0;
@@ -595,7 +646,7 @@ footer ul i {
   border-top-right-radius: 3rem;
 }
 
-/*Titre page menu: Nom du restaurant*/
+/*Titre de la page menu: Nom du restaurant*/
 .title_two {
   width: 100%;
   display: flex;
@@ -606,18 +657,14 @@ footer ul i {
   padding: 3rem 0;
   margin: 0;
 }
-.title_two h2 {
-  margin: 0;
-}
-
-/*L'ensemble des sections Entrées Plats & Desserts*/
+/*L'ensemble des sections (entrées plats & desserts): Menu */
 .menu {
   width: 95%;
 }
 
 /*Section Entrées, section Plats OU section Desserts*/
 .menu_carte {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
 }
@@ -732,7 +779,7 @@ footer ul i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9rem;
+  height: 7rem;
   width: 100%;
 }
 .menu_container .container_detail {
@@ -803,6 +850,8 @@ footer ul i {
   padding-right: 4rem;
 }
 
+/*Responsive: Version tablette*/
+/*Responsive: Version descktop; grand écran*/
 @media all and (min-width: 1024px) {
   header .header_menu {
     grid-template-columns: 42% 1fr;
@@ -818,31 +867,18 @@ footer ul i {
 
   .title_two {
     font-size: 3rem;
-    margin-top: 2rem;
   }
   .title_two .fa-heart {
     font-size: 4rem;
   }
 
-  /* .menu {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      margin-top: 5rem;
-      margin-bottom: 3rem;
-      .menu_carte {
-          width: 30%;
-          height: 100%;
-          margin: 1rem;
-      }
-      */
-  /*.menu_container {
-      line-height: 3rem;
-      font-size: 2rem;
-  }*/
+  .menu_carte h3 {
+    font-size: 3rem;
+  }
+  .menu_carte .menu_container {
+    font-size: 2.5rem;
+    height: 10rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
