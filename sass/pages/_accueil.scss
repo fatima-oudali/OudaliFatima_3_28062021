@@ -141,7 +141,7 @@
  /*page loader*/
  .loader_section{
     @include flexColumn;
-    background: #333;
+    background: $colour-BgSection;
     position: fixed;
     width: 100%;
     height: 100%;

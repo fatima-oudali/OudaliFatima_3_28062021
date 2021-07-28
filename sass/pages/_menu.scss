@@ -184,12 +184,12 @@
         background: $colour-tertiary;
         border-top-right-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
-        transition: all 0.2s ease-in;
+        transition: all 0.3s linear;
         width:0;
         height: 100%;
         @include flexMid;
         .fa-check-circle {
-            transition: transform 0.1s linear 0.2s; 
+            transition: transform 0.1s linear; 
             color:transparent;
             transform: rotate(-0.5turn) ;
         }
@@ -204,7 +204,8 @@
                 color: #fff;
                 position: relative;
                 display: inline;
-                transform: rotate(-20deg) ; 
+                transform: rotate(-20deg); 
+                transition-delay: 0.3s;
             } 
         .container_detail {
             width: 50%;
