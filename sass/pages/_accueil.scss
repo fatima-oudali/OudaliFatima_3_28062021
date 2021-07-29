@@ -42,7 +42,7 @@
     li {
         width: 100%;
         background: $colour-BgSection;
-        padding: 2.5rem;
+        padding: 2rem;
         margin: 1rem 0;
         font-size: 1.8rem;
         border-radius: 2.5rem;
@@ -55,7 +55,7 @@
             background-color: $colour-primary;
             padding: 0.6rem 1rem;
             border-radius: 50%;
-            margin-left: -3.5rem;
+            margin-left: -3.4rem;
             margin-right: 1rem;
         }
         i {
@@ -259,15 +259,10 @@
     0%{transform: rotate(0deg);}
     100%{transform: rotate(-720deg);}
 }
-                                                /*Reseponsive: Version tablette*/
+                                                /*Reseponsive: Version tablette et descktop*/
 @media all and(min-width: 767px) {
 
-     /*page loader*/
-    .loader_section{
-        p{
-            font-size: 10rem;  
-        }
-    }
+    
 
 
     .header_accueil{
@@ -276,17 +271,6 @@
             padding: 1rem;
             @include flexMid;
         }
-    }
-
-    form {
-        height: 6rem;
-        i{
-            font-size: 2rem;
-        }
-        input{
-            font-size: 2rem;
-        }
-    
     }
     .section_title {
         font-size: 3rem;
@@ -297,8 +281,13 @@
         li{
             margin: 1.5rem;
             padding: 1.5rem;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            height: 8rem;
+            .number{
+                margin-left: -3.1rem;
+            }
         }
+
     }
     .restaurants .section_cards{
         display: flex;
@@ -307,8 +296,11 @@
         margin-bottom: 4rem;
         .card {
             width: 40%;
-            height: 70%;
+            height: 22rem;
             margin: 2rem;
+        }
+        img {
+            height: 15rem;
         }
     }
 }
@@ -326,7 +318,6 @@
         line-height: 30rem;
         animation: visible 100ms 2s linear both;
         
-        
         p{
             font-size: 10rem;
             height: 50rem;
@@ -339,18 +330,26 @@
             margin-bottom: 20rem;
         }
     }
+    
 
 }   
   
                                              /*Reseponsive: Version Descktop très grand écran*/
 
 @media all and(min-width: 1500px) {
-    .card {
+    .restaurants .section_cards{
+        .card {
+            width: 40%;
+            height: 34rem;
+            margin: 4rem;
+        }
         img {
             height: 25rem;
         }
         .figcaption {
-            height: 10rem;
+            font-size: 2.5rem;
+            line-height: 2.5rem;
         }
     }
+    
 }

@@ -21,5 +21,17 @@ form {
        padding:1.5rem;
        font-size: 1.5rem;
     }
+}
+
+@media all and(min-width: 767px) {
+    form {
+        height: 6rem;
+        i{
+            font-size: 2rem;
+        }
+        input{
+            font-size: 2rem;
+        }
     
+    }
 }
