@@ -819,13 +819,16 @@ footer ul i {
 
 /*Responsive: Version tablette*/
 @media all and (min-width: 768px) {
+  header .header_menu {
+    height: 8rem;
+  }
   header .header_img {
-    height: 28rem;
+    height: 50rem;
   }
 
   .main_menu {
     margin-top: 30rem;
-    background: rgba(51, 51, 51, 0.9);
+    background: rgba(51, 51, 51, 0.8);
   }
   .main_menu .title_two {
     background: -webkit-linear-gradient(#FF79DA, #9356DC);
@@ -841,6 +844,7 @@ footer ul i {
 @media all and (min-width: 1024px) {
   header .header_menu {
     grid-template-columns: 42% 1fr;
+    height: 10rem;
   }
   header .fa-arrow-left {
     font-size: 2.5rem;
@@ -850,12 +854,9 @@ footer ul i {
   header .fa-arrow-left:hover {
     font-size: 3.5rem;
   }
-  header .header_img {
-    height: 32rem;
-  }
 
   .main_menu {
-    margin-top: 25rem;
+    margin-top: 30rem;
   }
 
   .title_two {
