@@ -3,10 +3,10 @@
 @keyframes appearTrans {
   0% {
     /*transition: translateY(-10rem);*/
-    transform: translateY(-4rem);
+    transform: translateY(-1rem);
     opacity: 0;
   }
-  50% {
+  30% {
     opacity: 0.5;
   }
   100% {
@@ -21,13 +21,14 @@
     opacity: 0;
   }
   50% {
-    opacity: 0;
+    opacity: 0.8;
   }
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
+/*Apparition progressive du menu*/
 html {
   font-size: 62.5%;
   line-height: 1.15;
@@ -165,54 +166,6 @@ form i {
     transform: scale(1);
   }
 }
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #333;
-  color: white;
-  width: 100%;
-  height: auto;
-  padding: 2rem;
-  z-index: 2;
-}
-footer h3 {
-  font-family: "Shrikhand", cursive;
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-  font-weight: 300;
-  margin: 0;
-}
-footer ul {
-  list-style-type: none;
-  font-size: 1.7rem;
-  font-weight: 500;
-  line-height: 3rem;
-  height: 11rem;
-  padding: 0;
-}
-footer ul a {
-  color: white;
-}
-footer ul a:hover {
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-footer ul i {
-  padding-right: 1rem;
-}
-
-@media all and (min-width: 1024px) {
-  footer ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 2rem;
-  }
-  footer h3 {
-    font-size: 3rem;
-  }
-}
 /*Header de la page d'accueil*/
 .header_logo {
   padding-right: 2rem;
@@ -224,6 +177,10 @@ footer ul i {
 }
 
 /*Sections de la page d'accueil*/
+.main_accueil {
+  background: #f6f6f6;
+}
+
 /*Titres des sections (présentation, fonctionnement, restaurants) de la page d'accueil*/
 .section_title {
   font-size: 2.5rem;
@@ -235,7 +192,6 @@ footer ul i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f6f6f6;
 }
 .presentation .reservation {
   text-align: center;
@@ -246,6 +202,9 @@ footer ul i {
 }
 
 /*Deuxième section de la page d'accueil: Fonctionnement*/
+.fonctionnement {
+  background-color: #fff;
+}
 .fonctionnement ul {
   list-style-type: none;
   padding: 0;
@@ -285,16 +244,15 @@ footer ul i {
 .fonctionnement ul li:hover .fas {
   color: #9356DC;
 }
-.fonctionnement ul .btn_3 {
+.fonctionnement .btn_3 {
   background-color: #f2eafb;
 }
-.fonctionnement ul .fa-store {
+.fonctionnement .fa-store {
   color: #9356DC;
 }
 
 /*Troisième section de la page d'accueil: Restaurants*/
 .restaurants {
-  background: #f6f6f6;
   padding-bottom: 2rem;
 }
 .restaurants .card {
@@ -653,86 +611,56 @@ footer ul i {
 
 /*Apparition progressive du menu*/
 .entrees .menu_container:nth-child(1) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
   animation-delay: 0s;
 }
 .entrees .menu_container:nth-child(2) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
   animation-delay: 0.3s;
 }
 .entrees .menu_container:nth-child(3) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 0.6s;
 }
 .entrees .menu_container:nth-child(4) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 0.7s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 0.9s;
 }
 
 .plats .menu_container:nth-child(1) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 0.9s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 1s;
 }
 .plats .menu_container:nth-child(2) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1.1s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 1.3s;
 }
 .plats .menu_container:nth-child(3) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1.3s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 1.6s;
 }
 
 .desserts .menu_container:nth-child(1) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1.5s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 1.9s;
 }
 .desserts .menu_container:nth-child(2) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1.7s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 2.2s;
 }
 .desserts .menu_container:nth-child(3) {
-  animation: appearScale;
-  /* animation: appearTrans;*/
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1.9s;
+  animation: appearScale 0.5s ease-in;
+  animation: appearTrans 2s 0.1s linear;
+  animation-delay: 2.5s;
 }
 
 /*Contenu de chaque section Entrées, Plats ou Desserts*/
@@ -788,11 +716,12 @@ footer ul i {
   align-items: center;
 }
 .menu_container .check .fa-check-circle {
-  transition: transform 0.1s ease-in;
+  transition: transform 0.25s linear;
   color: transparent;
   transform: rotate(-0.5turn);
 }
 .menu_container:hover {
+  /*animation: slider vert qui pousse le texte & coche qui tourne */
   cursor: pointer;
 }
 .menu_container:hover .check {
@@ -807,7 +736,7 @@ footer ul i {
   transform: rotate(-20deg);
   transition-delay: 0.15s;
 }
-.menu_container:hover .check .container_detail {
+.menu_container:hover .container_detail {
   width: 50%;
 }
 
@@ -817,7 +746,7 @@ footer ul i {
   padding-right: 4rem;
 }
 
-/*Responsive: Version tablette*/
+/*Responsive page menu: Version tablette*/
 @media all and (min-width: 768px) {
   header .header_menu {
     height: 8rem;
@@ -828,19 +757,10 @@ footer ul i {
 
   .main_menu {
     margin-top: 30rem;
-    background: rgba(51, 51, 51, 0.8);
-  }
-  .main_menu .title_two {
-    background: -webkit-linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .menu_carte h3 {
-    color: #f6f6f6;
+    background: rgba(234, 234, 234, 0.4);
   }
 }
-/*Responsive: Version descktop; grand écran*/
+/*Responsive page menu: Version descktop; grand écran*/
 @media all and (min-width: 1024px) {
   header .header_menu {
     grid-template-columns: 42% 1fr;
@@ -872,6 +792,54 @@ footer ul i {
   .menu_carte .menu_container {
     font-size: 2.5rem;
     height: 10rem;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  z-index: 2;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  margin: 0;
+}
+footer ul {
+  list-style-type: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 3rem;
+  height: 11rem;
+  padding: 0;
+}
+footer ul a {
+  color: white;
+}
+footer ul a:hover {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer ul i {
+  padding-right: 1rem;
+}
+
+@media all and (min-width: 1024px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+  }
+  footer h3 {
+    font-size: 3rem;
   }
 }
 

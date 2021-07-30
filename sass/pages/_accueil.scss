@@ -10,6 +10,9 @@
 
                                         
                                                     /*Sections de la page d'accueil*/
+.main_accueil {
+    background: $colour-BgSection;
+}
 
 /*Titres des sections (présentation, fonctionnement, restaurants) de la page d'accueil*/
 .section_title {                   
@@ -21,7 +24,6 @@
 
 .presentation {
     @include flexColumn;
-    background: $colour-BgSection;
     .reservation {
         text-align: center;
         font-size: 1.8rem;
@@ -33,7 +35,9 @@
 
 /*Deuxième section de la page d'accueil: Fonctionnement*/
 
-.fonctionnement ul {
+.fonctionnement {
+    background-color: #fff;
+    ul {
     list-style-type: none;
     padding: 0;
     margin: 2rem;
@@ -70,6 +74,7 @@
         }
 
     }
+    }
     .btn_3 {
         background-color: #f2eafb;
     }
@@ -81,7 +86,6 @@
 /*Troisième section de la page d'accueil: Restaurants*/
 
 .restaurants {
-    background: $colour-BgSection;
     padding-bottom: 2rem;
     .card {
         @include flexColumn;
@@ -261,9 +265,6 @@
 }
                                                 /*Reseponsive: Version tablette et descktop*/
 @media all and(min-width: 767px) {
-
-    
-
 
     .header_accueil{
         .header_logo {
