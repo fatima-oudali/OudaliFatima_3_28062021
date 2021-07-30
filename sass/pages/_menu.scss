@@ -139,6 +139,36 @@
     }
 }
 
+@keyframes appearTrans {
+    0%{
+        transform: translateY(-1rem);
+        opacity: 0; 
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+       transform: translateY(0);
+       opacity: 1;
+    }
+}
+
+@keyframes appearScale {
+    0%{
+        transform: scale(0);
+        opacity: 0; 
+    }
+    50% {
+        opacity: 0.8;
+    }
+    
+    100% {
+       transform: scale(1);
+       opacity: 1;
+    }
+}
+
+
 /*Contenu de chaque section Entrées, Plats ou Desserts*/
 .menu_container {
     background-color: white;
@@ -151,7 +181,7 @@
     align-items: center;
     height: 7rem;
     width: 100%;
-    .container_detail{  
+    .container_text{  
         width: 80%;
         display: flex;
         flex-direction: column;
@@ -208,7 +238,7 @@
                 transition-delay: 0.15s;
             } 
         }
-        .container_detail {
+        .container_text {
             width: 50%;
         }
         
@@ -222,7 +252,7 @@
 }
 
 
-                                             /*Responsive page menu: Version tablette*/
+                                             /*Responsive page menu: Version tablette et desktop*/
 @media all and(min-width: 768px) {
     header {
         .header_menu {
@@ -239,7 +269,7 @@
 }
 
 
-                                             /*Responsive page menu: Version descktop; grand écran*/
+                                             /*Responsive page menu: Version descktop*/
 @media all and(min-width: 1024px) {
     header {
         .header_menu {

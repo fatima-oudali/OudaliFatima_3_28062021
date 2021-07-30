@@ -1,9 +1,12 @@
+
+/*centrer des élements avec Flexbox */
 @mixin flexMid {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Flex column */
 @mixin flexColumn {
     display: flex;
     flex-direction: column;
@@ -11,23 +14,24 @@
     
 }
 
+/* couleur de text graduée*/
 @mixin linearGradient {
     background: -webkit-linear-gradient($colour-secondary, $colour-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/*L'ombre de boites*/
 @mixin shadow {
     box-shadow: 0 0.5rem 1.5rem $shadow;
 }
 
-
-/*Hover cards & btn */
-
+/*L'ombre de boites lors du survol*/
 @mixin shadowHover {                   
     box-shadow: 0 1.5rem 1rem $shadow;
 }
 
+/*Hover cards & btn */
 @mixin Hover { 
     @include shadowHover;
     cursor: pointer;
@@ -35,40 +39,8 @@
     transition: all 0.3s linear;
 }
 
-@keyframes appearTrans {
-    0%{
-        /*transition: translateY(-10rem);*/
-        transform: translateY(-1rem);
-        opacity: 0; 
-    }
-    30% {
-        opacity: 0.5;
-    }
-    100% {
-      /* transition: translateY(0);*/
-       transform: translateY(0);
-       opacity: 1;
-    }
-}
 
-@keyframes appearScale {
-    0%{
-        transform: scale(0);
-        opacity: 0; 
-    }
-    50% {
-        opacity: 0.8;
-    }
-    
-    100% {
-       transform: scale(1);
-       opacity: 1;
-    }
-}
-
-/*Apparition progressive du menu*/ 
-@mixin appear_menu {
+@mixin appear_menu{
     animation: appearScale 0.5s ease-in;
     animation: appearTrans 2s 0.1s linear;
 }
-

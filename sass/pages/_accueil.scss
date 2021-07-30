@@ -65,18 +65,11 @@
         i {
             margin: 0 2rem;
         }
-        &:hover {
-            @include Hover;
-            background-color: #f2eafb;
-            .fas {
-                color: $colour-primary;
-            }
-        }
-
+        
     }
     }
     .btn_3 {
-        background-color: #f2eafb;
+        background-color: #ece3f5;
     }
     .fa-store {
         color: $colour-primary;
@@ -157,11 +150,11 @@
         font-family: $font-title;
         font-size: 5rem;
         color: $colour-primary;
-        animation: flash 1.3s ease-in infinite;
+        animation: flash 1s ease-in infinite;
         animation-delay: 0.1s;
     }
     .point {
-        animation: flash 1.3s ease-in infinite;
+        animation: flash 1s ease-in infinite;
     }
     .pt_1 {
         animation-delay: 0.1s;
@@ -177,11 +170,11 @@
 
 /*Animation: visibilté du loader*/
 @keyframes visible {
-    from {
+    0% {
         z-index: 5;
         opacity: 1;
     }
-    to {
+    100% {
         z-index: -100;
         opacity: 0;
     }
@@ -253,7 +246,6 @@
     animation: spin 2s linear  infinite;
 }
 
-/*Animation du 'check icon': rotation de l'icone */
 @keyframes spin {
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}

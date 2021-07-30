@@ -1,34 +1,10 @@
 @charset "UTF-8";
+/*centrer des élements avec Flexbox */
+/* Flex column */
+/* couleur de text graduée*/
+/*L'ombre de boites*/
+/*L'ombre de boites lors du survol*/
 /*Hover cards & btn */
-@keyframes appearTrans {
-  0% {
-    /*transition: translateY(-10rem);*/
-    transform: translateY(-1rem);
-    opacity: 0;
-  }
-  30% {
-    opacity: 0.5;
-  }
-  100% {
-    /* transition: translateY(0);*/
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes appearScale {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-/*Apparition progressive du menu*/
 html {
   font-size: 62.5%;
   line-height: 1.15;
@@ -234,18 +210,8 @@ form i {
 .fonctionnement ul li i {
   margin: 0 2rem;
 }
-.fonctionnement ul li:hover {
-  box-shadow: 0 1.5rem 1rem #00000033;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 0.3s linear;
-  background-color: #f2eafb;
-}
-.fonctionnement ul li:hover .fas {
-  color: #9356DC;
-}
 .fonctionnement .btn_3 {
-  background-color: #f2eafb;
+  background-color: #ece3f5;
 }
 .fonctionnement .fa-store {
   color: #9356DC;
@@ -328,11 +294,11 @@ form i {
   font-family: "Shrikhand", cursive;
   font-size: 5rem;
   color: #9356DC;
-  animation: flash 1.3s ease-in infinite;
+  animation: flash 1s ease-in infinite;
   animation-delay: 0.1s;
 }
 .loader_section .point {
-  animation: flash 1.3s ease-in infinite;
+  animation: flash 1s ease-in infinite;
 }
 .loader_section .pt_1 {
   animation-delay: 0.1s;
@@ -346,11 +312,11 @@ form i {
 
 /*Animation: visibilté du loader*/
 @keyframes visible {
-  from {
+  0% {
     z-index: 5;
     opacity: 1;
   }
-  to {
+  100% {
     z-index: -100;
     opacity: 0;
   }
@@ -419,7 +385,6 @@ form i {
   animation: spin 2s linear infinite;
 }
 
-/*Animation du 'check icon': rotation de l'icone */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -663,6 +628,32 @@ form i {
   animation-delay: 2.5s;
 }
 
+@keyframes appearTrans {
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appearScale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 /*Contenu de chaque section Entrées, Plats ou Desserts*/
 .menu_container {
   background-color: white;
@@ -676,7 +667,7 @@ form i {
   height: 7rem;
   width: 100%;
 }
-.menu_container .container_detail {
+.menu_container .container_text {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -685,13 +676,13 @@ form i {
   overflow: hidden;
   text-align: justify;
 }
-.menu_container .container_detail h4 {
+.menu_container .container_text h4 {
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu_container .container_detail p {
+.menu_container .container_text p {
   margin: 0;
   padding: 1rem 0;
   text-overflow: ellipsis;
@@ -736,7 +727,7 @@ form i {
   transform: rotate(-20deg);
   transition-delay: 0.15s;
 }
-.menu_container:hover .container_detail {
+.menu_container:hover .container_text {
   width: 50%;
 }
 
@@ -746,7 +737,7 @@ form i {
   padding-right: 4rem;
 }
 
-/*Responsive page menu: Version tablette*/
+/*Responsive page menu: Version tablette et desktop*/
 @media all and (min-width: 768px) {
   header .header_menu {
     height: 8rem;
@@ -760,7 +751,7 @@ form i {
     background: rgba(234, 234, 234, 0.4);
   }
 }
-/*Responsive page menu: Version descktop; grand écran*/
+/*Responsive page menu: Version descktop*/
 @media all and (min-width: 1024px) {
   header .header_menu {
     grid-template-columns: 42% 1fr;
