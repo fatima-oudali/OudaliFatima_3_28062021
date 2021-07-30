@@ -283,7 +283,7 @@ form i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f6f6f6;
+  background: #fff;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -576,55 +576,55 @@ form i {
 
 /*Apparition progressive du menu*/
 .entrees .menu_container:nth-child(1) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 0s;
 }
 .entrees .menu_container:nth-child(2) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 0.3s;
 }
 .entrees .menu_container:nth-child(3) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 0.6s;
 }
 .entrees .menu_container:nth-child(4) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 0.9s;
 }
 
 .plats .menu_container:nth-child(1) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 1s;
 }
 .plats .menu_container:nth-child(2) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 1.3s;
 }
 .plats .menu_container:nth-child(3) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 1.6s;
 }
 
 .desserts .menu_container:nth-child(1) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 1.9s;
 }
 .desserts .menu_container:nth-child(2) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 2.2s;
 }
 .desserts .menu_container:nth-child(3) {
-  animation: appearScale 1s 0.1s ease forwards;
-  animation: appearTrans 2s linear forwards;
+  animation: appearScale 2s 0.1s ease;
+  animation: appearTrans 2s linear;
   animation-delay: 2.5s;
 }
 
@@ -646,8 +646,8 @@ form i {
     transform: scale(0);
     opacity: 0;
   }
-  50% {
-    opacity: 0.8;
+  60% {
+    opacity: 0.5;
   }
   100% {
     transform: scale(1);
