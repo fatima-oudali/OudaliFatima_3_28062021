@@ -732,11 +732,6 @@ form i {
   width: 50%;
 }
 
-/*Bouton Commander*/
-/*.commander {
-    padding-left: 4rem;
-    padding-right: 4rem;
-}*/
 /*Responsive page menu: Version tablette et desktop*/
 @media all and (min-width: 768px) {
   header .header_menu {
