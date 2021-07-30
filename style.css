@@ -100,7 +100,8 @@ form i {
   font-weight: 500;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  padding: 1.5rem;
+  height: 5rem;
+  padding: 0 2rem;
   border-radius: 2.5rem;
   border: none;
   margin: 1rem 0;
@@ -108,13 +109,13 @@ form i {
   transition: all 0.3s;
 }
 .primary-button:hover {
-  box-shadow: 0 1.5rem 1rem #00000033;
+  box-shadow: 0 2rem 1rem #00000033;
   cursor: pointer;
   transform: scale(1.03);
   transition: all 0.3s linear;
-  opacity: 0.85;
+  background: linear-gradient(#ff85dd, #a363f1);
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
 }
 
@@ -251,7 +252,7 @@ form i {
   border-top-right-radius: 1.5rem;
 }
 .restaurants .card:hover {
-  box-shadow: 0 1.5rem 1rem #00000033;
+  box-shadow: 0 2rem 1rem #00000033;
   cursor: pointer;
   transform: scale(1.03);
   transition: all 0.3s linear;
@@ -732,11 +733,10 @@ form i {
 }
 
 /*Bouton Commander*/
-.commander {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
+/*.commander {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}*/
 /*Responsive page menu: Version tablette et desktop*/
 @media all and (min-width: 768px) {
   header .header_menu {

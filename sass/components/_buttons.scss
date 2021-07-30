@@ -3,7 +3,8 @@
     font-weight: 500;
     background: linear-gradient($colour-secondary, $colour-primary);
     color: white;
-    padding: 1.5rem;
+    height: 5rem;
+    padding: 0 2rem;
     border-radius: 2.5rem;
     border: none;
     margin: 1rem 0;
@@ -11,9 +12,9 @@
     transition: all 0.3s; 
     &:hover {
         @include Hover;
-        opacity: 0.85;
+        background: linear-gradient($colour-secondary_clair, $colour-primary_clair);
         color: white;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         font-weight: 600;
     }
 }
