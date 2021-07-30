@@ -41,6 +41,6 @@
 
 
 @mixin appear_menu{
-    animation: appearScale 0.5s ease-in;
-    animation: appearTrans 2s 0.1s linear;
+    animation: appearScale 1s 0.1s ease forwards;
+    animation: appearTrans 2s linear forwards;
 }

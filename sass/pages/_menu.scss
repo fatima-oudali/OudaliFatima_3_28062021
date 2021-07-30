@@ -219,7 +219,7 @@
         height: 100%;
         @include flexMid;
         .fa-check-circle {
-            transition: transform 0.25s linear; 
+            transition: transform 0.3s ease-out; 
             color:transparent;
             transform: rotate(-0.5turn) ;
         }
