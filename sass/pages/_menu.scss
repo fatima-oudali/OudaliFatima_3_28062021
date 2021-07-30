@@ -144,7 +144,7 @@
         transform: translateY(-1rem);
         opacity: 0; 
     }
-    30% {
+    70% {
         opacity: 0.5;
     }
     100% {
@@ -158,7 +158,7 @@
         transform: scale(0);
         opacity: 0; 
     }
-    60% {
+    70% {
         opacity: 0.5;
     }
     
@@ -167,6 +167,7 @@
        opacity: 1;
     }
 }
+
 
 
 /*Contenu de chaque section Entrées, Plats ou Desserts*/
@@ -214,12 +215,12 @@
         background: $colour-tertiary;
         border-top-right-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
-        transition: all 0.3s linear;
+        transition: all 0.4s ease-in;
         width:0;
         height: 100%;
         @include flexMid;
         .fa-check-circle {
-            transition: transform 0.3s ease-out; 
+            transition: transform 0.3s ease-in; 
             color:transparent;
             transform: rotate(-0.5turn) ;
         }
